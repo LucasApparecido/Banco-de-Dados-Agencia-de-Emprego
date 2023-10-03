@@ -1,0 +1,71 @@
+Exercícios Banco de Dados 1VA
+Para o trablaho da 2VA de banco de dados deverá ser formados duplas de alunos para analisarem um  Modelo Descritivo e desenvolver o MER, MR e criar a DDL para criação das tabelas e um DML para inserir dados nas tabelas (como se fossem dados gerados por um sistema real) e 6 perguntas de SQL.
+
+Nesse fórum o lider da dupla deve postar o nome dos integrantes da dupla no tópico do tema que a dupla deseja trabalhar, cada tema poderá ter no máximo uma dupla, a dupla que postar primeiro terá o direito de usar aquela tema.
+
+Temas:
+1. locadora de carro
+O Senhor Tanenbaum, deseja que seja desenvolvido um sistema para controlar a locadora de carro da família, ele quer cadastrar os clientes, os carros, e cada carro deve ter um tipo, e deve ser feito o registro da locação de cada veículo, sendo possível alugar apenas um carro por vez, o preço da locação é definido pelo tipo do carro. Na locação ele quer controlar a data da saída do carro da locadora, a data de retorno do carro, o total de quilômetros rodado e o valor pago pelo cliente.
+Ele deseja os seguintes relatórios:
+1. Lista de Clientes;
+2. Lista de clientes do bairro "Jundiaí";
+3. Lista das locações com o nome do cliente, a data da retirada, data do retorno, km rodados e valor total da locação
+4. Lista dos clientes que já realizaram uma locação.
+5. Total de Carros da locadora
+6. Lista dos carros e o total de vezes que carro já foi locados (apenas dos carros já locados)
+
+2. venda simples
+O Senhor Arquibalde, deseja que seja desenvolvido um sistema simples para controlar as vendas do mercadinho da família, ele quer cadastrar os clientes, os produtos, e cada produto deve ter um tipo, e deve ser realizado o registro das vendas, na venda deve ter a informação do cliente, a data e o produto que o cliente comprou (quantidade e valor unitário).
+Ele deseja os seguintes relatórios:
+1. Lista de Clientes;
+2. Lista de Clientes do bairro "Jundiaí";
+3. Lista das Vendas com o nome do cliente, a data da compra, nome do produto valor unitário, quantidade e valor total por produto.
+4. Lista dos Produtos que já foram vendidos.
+5. Total de Produtos da loja
+6. Lista dos produtos e o total de vezes que o produto já foi vendidos (apenas dos produtos já vendidos).
+
+3. Folha de pagamento
+O Dr. Pinpolho, deseja controlar a folha de pagamento da empresa familiar, ele deseja cadastrar os funcionários, os cargos e o pagamento realizado a cada funcionário, o pagamento deve conter uma lista com a descrição do item do pagamento, e cada item de pagamento deve ter: a descrição, quantidade e valor do item. Os itens de desconto devem ter valor negativo e os proventos devem ter o valor positivo.
+1. Lista os dados dos funcionários;
+2. Lista os funcionários do sexo feminino;
+3. Listar os pagamentos com o nome do funcionário, a data do pagamento, a descrição do item, valor do item;
+4. Lista dos Cargos que possuem funcionários cadastrados;
+5. Total de Cargos da empresa;
+6. Listar os pagamentos com o nome do funcionário, data e valor total pago;
+
+4. Controle perícia
+O Sr. Geraldo Alckmin, deseja controlar melhor na sua repartição o controle das solicitações de perícia, e encomendou o desenvolvimento de um sistema que cadastre os Solicitantes, o Local da Perícia (nome, cidade, endereço), e o tipo das perícias (o preço da perícia e determinado pelo tipo) e a solicitação de perícia que deve ter a data da solicitação da perícia, texto contendo o resultado da perícia, e o valor final.
+1. Listar os dados dos solicitantes
+2. Listar os Locais de Perícia do estado de Goiás(GO)
+3. Listar os dados da perícia, nome do solicitante, data da perícia, local (cidade e estado), texto da perícia e valor final;
+4. Listar os Locais que já tiveram perícia realizada;
+5. Total de solicitantes
+6. Listar os tipos de perícias e quantas perícias já foram realizadas para esse tipo.
+
+5. Agencia de emprego
+O Dr. Arquibalde, deseja controlar o sistema para a agencia de emprego da família, controlar o Cadastro de Trabalhadores, Solicitantes (quem oferece vaga), Vaga e agenda das entrevistas de emprego. Deve ser feito o registro das vagas de emprego com a informação do solicitante, e a agenda de entrevista deve conter a vaga, data da entrevista, trabalhador e resultado final da entrevista (contratado, dispensado).
+1. Listar os dados dos Trabalhadores;
+2. Listar o Solicitantes da cidade de Anápolis;
+3. Listar os dados da entrevista: nome do solicitante, nome da vaga, descrição da vaga, data da entrevista, nome do entrevistado e resultado final da entrevista;
+4. Listar as Vagas que já tiveram entrevista (nome do solicitante, e descrição da vaga e salário da vaga)
+5. Total de vagas da agencia;
+6. Total de trabalhadores entrevistados para a vaga (Descrição da vaga, total de entrevistados);
+
+6. Oficina Mecânica
+O Sr. Aroldo, deseja melhor o atendimento dos clientes da oficina mecânica da família, e deseja cadastrar os Carros, os Donos dos carros, os Serviços disponíveis na oficina, e fazer o orçamento. Para o orçamento ele quer informar o carro, a data, observação geral, e os serviços (contendo o serviço, a quantidade e o valor total do serviço).
+1. Listar os dados do Carro;
+2. Listar os dados do Cliente das cidades do estado de Goiás(GO);
+3. Listar os dados dos orçamentos (nome do dono do carro, placa do carro, km rodados do carro, data do orçamento, serviços , quantidade do serviço e valor total deste serviço).
+4. Listar os serviços que já foram feito orçamentos (nome do serviço, preço unitário do serviço)
+5. Total de Serviços da oficina;
+6. Total por Orçamento, listar o orçamento(data, nome do do dono, placa do arro, km rodados) e somatório dos serviços do orçamento.
+
+7. Simulador de prova
+Uma pequena escola solicitou a criação de um sistema de simulado, que deve ter um cadastro de Pessoas, Provas, Questões e itens, sendo que a questão deve ter o gabarito. E registrar a resposta das Pessoas.
+1. Listar os dados das pessoas;
+2. Listar as Pessoas da cidades do estado de Goiás(GO);
+3. Listar as provas(Descrição da prova, questão, itens );
+4. Listar as provas que já tiveram simulado( que já tiveram respostas);
+5. Total de Provas do sistema;
+6. Listar o resultados das provas, deve ter a descrição da prova, o nome da pessoa, total de acertos, total de erros, e Nota final(somatórios dos acertos - somatórios dos erros);
+
