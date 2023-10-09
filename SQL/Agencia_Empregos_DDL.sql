@@ -1,13 +1,13 @@
 -- DDL
 CREATE TABLE cidade (
-    id INTEGER, 
+    id INTEGER,
     PRIMARY KEY (id),
     uf CHAR(2),
     nome VARCHAR(50)
 );
 
 CREATE TABLE trabalhador (
-    cpf VARCHAR(11), 
+    cpf VARCHAR(11),
     PRIMARY KEY (cpf),
     data_nascimento DATE,
     nome VARCHAR(50),
@@ -18,6 +18,7 @@ CREATE TABLE trabalhador (
 CREATE TABLE solicitante (
     cnpj VARCHAR(14),
     PRIMARY KEY (cnpj),
+    nome VARCHAR(50),
     razao_social VARCHAR(50),
     cidade_id INTEGER,
     FOREIGN KEY(cidade_id) REFERENCES cidade (id)
@@ -28,7 +29,8 @@ CREATE TABLE vaga (
     PRIMARY KEY (id),
     descricao VARCHAR(100),
     nome VARCHAR(45),
-    status INTEGER,
+    status BOOLEAN,
+    salario FLOAT,
     solicitante_cnpj VARCHAR(14),
     cidade_id INTEGER,
     FOREIGN KEY(solicitante_cnpj) REFERENCES solicitante (cnpj),
@@ -46,10 +48,9 @@ CREATE TABLE candidatura (
     FOREIGN KEY(vaga_id) REFERENCES vaga (id)
 );
 
---drop table cidade;
---drop table solicitante;
---drop table vaga;
---drop table trabalhador;
 --drop table candidatura;
-
+--drop table trabalhador;
+--drop table vaga;
+--drop table solicitante;
+--drop table cidade;
 -- END DDL
