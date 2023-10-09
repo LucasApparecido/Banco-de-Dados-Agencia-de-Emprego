@@ -11,19 +11,18 @@ where
     t.cidade_id = c.id;
 
 --2. Listar o Solicitantes da cidade de Anápolis;
-select
-    *
-from
-    solicitante
-where
-    cidade_id = (
-        select
-            id
-        from
-            cidade
-        where
-            nome = 'Anápolis'
-    );
+SELECT
+    s.cnpj,
+    s.nome,
+    s.razao_social,
+    cidade.nome as nome_cidade,
+    s.cidade_id
+FROM
+    solicitante s
+    JOIN 
+		cidade ON s.cidade_id = cidade.id
+WHERE
+    cidade.nome = 'Anápolis';
 
 --3. Listar os dados da entrevista: nome do solicitante, nome da vaga, 
 --   descrição da vaga, data da entrevista, nome do entrevistado e resultado final da entrevista;

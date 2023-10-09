@@ -47,10 +47,4 @@ CREATE TABLE candidatura (
     FOREIGN KEY(trabalhador_cpf) REFERENCES trabalhador (cpf),
     FOREIGN KEY(vaga_id) REFERENCES vaga (id)
 );
-
---drop table candidatura;
---drop table trabalhador;
---drop table vaga;
---drop table solicitante;
---drop table cidade;
 -- END DDL
