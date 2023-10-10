@@ -1,45 +1,45 @@
 -- DDL
 CREATE TABLE cidade (
-    id INTEGER,
+    id INTEGER NOT NULL,
     PRIMARY KEY (id),
-    uf CHAR(2),
-    nome VARCHAR(50)
+    uf CHAR(2) NOT NULL,
+    nome VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE trabalhador (
-    cpf VARCHAR(11),
+    cpf VARCHAR(11) NOT NULL,
     PRIMARY KEY (cpf),
-    data_nascimento DATE,
-    nome VARCHAR(50),
-    cidade_id INTEGER,
+    data_nascimento DATE NOT NULL,
+    nome VARCHAR(50) NOT NULL,
+    cidade_id INTEGER NOT NULL,
     FOREIGN KEY(cidade_id) REFERENCES cidade (id)
 );
 
 CREATE TABLE solicitante (
-    cnpj VARCHAR(14),
+    cnpj VARCHAR(14) NOT NULL,
     PRIMARY KEY (cnpj),
-    nome VARCHAR(50),
-    razao_social VARCHAR(50),
-    cidade_id INTEGER,
+    nome VARCHAR(50) NOT NULL,
+    razao_social VARCHAR(50) NOT NULL,
+    cidade_id INTEGER NOT NULL,
     FOREIGN KEY(cidade_id) REFERENCES cidade (id)
 );
 
 CREATE TABLE vaga (
-    id INTEGER,
+    id INTEGER NOT NULL,
     PRIMARY KEY (id),
-    descricao VARCHAR(100),
-    nome VARCHAR(45),
-    status BOOLEAN,
-    salario FLOAT,
-    solicitante_cnpj VARCHAR(14),
-    cidade_id INTEGER,
+    descricao VARCHAR(100) NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    status BOOLEAN NOT NULL,
+    salario FLOAT NOT NULL,
+    solicitante_cnpj VARCHAR(14) NOT NULL,
+    cidade_id INTEGER NOT NULL,
     FOREIGN KEY(solicitante_cnpj) REFERENCES solicitante (cnpj),
     FOREIGN KEY(cidade_id) REFERENCES cidade (id)
 );
 
 CREATE TABLE candidatura (
-    trabalhador_cpf VARCHAR(11),
-    vaga_id INTEGER,
+    trabalhador_cpf VARCHAR(11) NOT NULL,
+    vaga_id INTEGER NOT NULL,
     PRIMARY KEY (trabalhador_cpf, vaga_id),
     resultado INTEGER,
     data_entrevista DATE,
