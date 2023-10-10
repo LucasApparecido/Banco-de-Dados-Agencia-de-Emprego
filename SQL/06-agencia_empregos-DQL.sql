@@ -19,8 +19,7 @@ SELECT
     s.cidade_id
 FROM
     solicitante s
-    JOIN 
-		cidade ON s.cidade_id = cidade.id
+    JOIN cidade ON s.cidade_id = cidade.id
 WHERE
     cidade.nome = 'Anápolis';
 
@@ -66,11 +65,12 @@ where
 
 --5. Total de vagas da agencia;
 select
-    count(v.id) as qtd_vagas
+    v.solicitante_cnpj as cnpj,
+    count(v.solicitante_cnpj)
 from
     vaga v
-where
-    v.solicitante_cnpj = '87654321098765';
+group by
+    v.solicitante_cnpj;
 
 --6. Total de trabalhadores entrevistados para a vaga 
 --   (Descrição da vaga, total de entrevistados);
